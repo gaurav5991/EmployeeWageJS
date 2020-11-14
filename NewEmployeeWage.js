@@ -81,7 +81,7 @@ let mapDayWithWageArr = empDailyWageArray.map(mapDayWithWage);
 console.log("UC 7B - Daily Wage Map:");
 console.log(mapDayWithWageArr);
 
-// //UC 7C - Show days when full time wage were earned
+//UC 7C - Show days when full time wage were earned
 function fullTimeWage(dailyWage){
   return dailyWage.includes("160");
 }
@@ -103,3 +103,10 @@ function isAllFullTimeWage(dailyWage){
 }
 
 console.log("UC 7E- Is every element holding full time wage: "+fullDayWageArr.every(findFullTimeWage));
+
+//UC7F - Check if any Part Time Wage is present
+function isAnyPartTimeWage(dailyWage){
+  return dailyWage.includes("80");
+}
+
+console.log("UC 7F- Is part time wage present in any element? - "+mapDayWithWageArr.some(isAnyPartTimeWage));
